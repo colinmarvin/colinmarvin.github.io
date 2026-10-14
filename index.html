@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>M. Colin Marvin</title>
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -15,7 +15,6 @@
     <ul class="nav-links">
       <li><a href="index.html" class="active">Home</a></li>
       <li><a href="publications.html">Publications</a></li>
-      <li><a href="data-code.html">Data &amp; Code</a></li>
       <li><a href="field-photos.html">Field Photos</a></li>
       <li><a href="media.html">Media</a></li>
     </ul>
@@ -24,138 +23,69 @@
 
 <!-- ── Page Content ───────────────────────────────── -->
 <div class="page-wrapper">
-  <div class="home-grid">
 
-    <!-- LEFT: Bio + Research Themes -->
-    <main class="home-main">
+  <!-- Profile header: circle photo left, name/links right -->
+  <div class="profile-header">
+    <img class="headshot-circle" src="images/headshot.jpeg" alt="M. Colin Marvin">
+    <div class="profile-info">
+      <p class="profile-name-large">M. Colin Marvin</p>
+      <p class="profile-position">Postdoctoral Research Associate · Brown University</p>
+      <p class="profile-email"><a href="mailto:m_colin_marvin@brown.edu">m_colin_marvin@brown.edu</a></p>
 
-      <!-- Summary paragraph -->
-      <!-- PLACEHOLDER: Replace this with your personal bio/summary paragraph -->
-      <div class="home-bio">
-        <p>
-          <!-- PLACEHOLDER: Summary text. Example draft below — edit to taste: -->
-          I am a Postdoctoral Research Associate in the Department of Earth, Environmental, and Planetary Sciences at Brown University. My research sits at the intersection of geomorphology, planetary science, and sedimentology, using aeolian dunes and sand surface textures as windows into the environmental conditions of Earth and other planetary bodies. I completed my Ph.D. in Geological Sciences at Stanford University in 2026 and my B.S. in Geography (Honors) at Arizona State University in 2021.
-        </p>
+      <!-- Social / external links -->
+      <div class="social-links">
+        <a href="CV_Marvin.pdf" target="_blank" rel="noopener" title="Curriculum Vitae">
+          <span class="social-cv">CV</span>
+        </a>
+        <a href="https://scholar.google.com/citations?user=mNo5eIQAAAAJ&hl=en" target="_blank" rel="noopener" title="Google Scholar">
+          <img class="social-logo" src="images/google_scholar_logo.jpeg" alt="Google Scholar">
+        </a>
+        <a href="https://orcid.org/0000-0001-5774-0972" target="_blank" rel="noopener" title="ORCID">
+          <img class="social-logo" src="images/orcid_logo.jpeg" alt="ORCID">
+        </a>
+        <a href="https://sambirch-brown.github.io/samlab/" target="_blank" rel="noopener" title="Lab Website">
+          <img class="social-logo" src="images/lab_website_logo.jpeg" alt="Lab Website">
+        </a>
+        <a href="https://github.com/colinmarvin" target="_blank" rel="noopener" title="GitHub">
+          <img class="social-logo" src="images/github_logo.jpeg" alt="GitHub">
+        </a>
+        <a href="https://x.com/mcolinmarvin" target="_blank" rel="noopener" title="X (Twitter)">
+          <img class="social-logo" src="images/X_logo.jpeg" alt="X">
+        </a>
+        <a href="https://bsky.app/profile/mcolinmarvin.bsky.social" target="_blank" rel="noopener" title="Bluesky">
+          <img class="social-logo" src="images/bluesky_logo.jpeg" alt="Bluesky">
+        </a>
       </div>
+    </div>
+  </div>
 
-      <!-- Research Themes section -->
-      <p class="section-label">Research</p>
-      <h2 class="research-themes-title">Research Themes</h2>
+  <!-- Bio paragraph -->
+  <div class="home-bio">
+    <p>I am a Postdoctoral Research Associate in the Department of Earth, Environmental, and Planetary Sciences at Brown University. My research sits at the intersection of geomorphology, planetary science, and sedimentology, using aeolian dunes and sand surface textures as windows into the environmental conditions of Earth and other planetary bodies. My research themes include:</p>
+  </div>
 
-      <!-- Theme 1 -->
-      <div class="theme-block">
-        <h3 class="theme-title">
-          <!-- PLACEHOLDER: Complete this title, e.g. "Characterizing River-Dune Interactions" -->
-          Characterizing River-Dune Interactions
-        </h3>
-        <p class="theme-text">
-          <!-- PLACEHOLDER: Add summary text for this research theme -->
-          [Summary text for river-dune research theme — to be filled in.]
-        </p>
-      </div>
+  <!-- Research themes — no section header, flows from bio -->
 
-      <!-- Theme 2 -->
-      <div class="theme-block">
-        <h3 class="theme-title">
-          <!-- PLACEHOLDER: Add title for second research theme -->
-          [Research Theme 2 Title]
-        </h3>
-        <p class="theme-text">
-          <!-- PLACEHOLDER: Add summary text for second research theme -->
-          [Summary text for second research theme — to be filled in.]
-        </p>
-      </div>
+  <div class="theme-block">
+    <h3 class="theme-title">Characterizing River-Dune Interactions</h3>
+    <p class="theme-text">Rivers and windblown dunes record the time-integrated interactions between a planet's surface and its hydrosphere and atmosphere, respectively. How these systems interact with one another is understudied. This series of ongoing projects asks: 1) Under what conditions can dunes cross ephemeral rivers? 2) How is the signature of fluvial activity recorded in dune crestlines? Here, we seek to understand the variable climate history of Saturn's moon Titan using the Namib Sand Sea as an analogue.</p>
+  </div>
 
-      <!-- Theme 3: Sand Surface Textures -->
-      <div class="theme-block">
-        <h3 class="theme-title">Sand Surface Textures</h3>
-        <p class="theme-text">
-          <!-- PLACEHOLDER: Complete this sentence — it was cut off in the prompt -->
-          Sand is transported by a variety of different [processes, leaving characteristic microscale textures on individual grains. These textures can be read to reconstruct past transport environments on Earth and other planets — complete this paragraph.]
-        </p>
-      </div>
+  <div class="theme-block">
+    <h3 class="theme-title">Environmental Conditions Recorded in Sand Dune Patterns</h3>
+    <p class="theme-text">The patterns formed by dune crestlines are readily observed in orbital images. As the dune field evolves, dune spacing and size increase and the spatial density of collisions decreases. However, when environmental conditions change, dunes break apart and reorient, resulting in transient pattern disorganization. Pattern disorganization can be localized (due to, e.g., topography or changes in sediment supply or availability) or recent in time (i.e., wholesale pattern reorganization due to a change in wind regime). Pattern disorganization, combined with rudimentary constraints on dune response time, provide the opportunity to probe the signature of past climate and surface conditions on other planetary bodies (Marvin et al., 2023). For example, Titan's equatorial belt of dunes becomes better organized with distance downwind from the Xanadu region, all the way around the moon to the other side of Xanadu. This suggests that Titan's dune fields are linked, forming the largest known dune field in the Solar System, with implications for the material properties of Titan's sand grains (Marvin et al., 2025).</p>
+  </div>
 
-      <!-- Theme 4: Other Research Themes -->
-      <div class="theme-block">
-        <h3 class="theme-title">Other Research Themes</h3>
-        <p class="theme-text">
-          In addition to my main research avenues, I have also engaged in a variety of other endeavors, including understanding the deposits of unvegetated meandering rivers (Hasson et al., 2023), outburst floods on Earth and Mars (Blaske et al., in review; in review), Precambrian sedimentology (Colicci et al., in review), and coastal foredunes (Hilgendorf et al., 2021; Marvin et al., in prep).
-        </p>
-      </div>
+  <div class="theme-block">
+    <h3 class="theme-title">Sand Microtextures</h3>
+    <p class="theme-text">Sand is ubiquitous at Earth's surface. The different processes that transport sand across Earth's surface shape and texture grains differently, such that the surface morphology of grains from different depositional environments (e.g., aeolian vs. fluvial) is distinct. This approach is applicable to sedimentary rocks as well. However, traditional microtextural analysis techniques are time consuming, subjective, and reduce inter-sample variability to a single data point. The SandAI classifier produces an automated classification of single-grain images of quartz sand, providing an objective methodology that characterizes the relative influence of multiple environments on the same grain (Hasson et al., 2024). However, the likelihood of quartz recrystallization due to diagenesis and metamorphism increases with depositional age, limiting this technique to younger sedimentary rocks. Hence, I developed the first catalogue of microtextures on zircon sand grains, which are more resistant to recrystallization. This technique can be applied to rocks that record Earth's earliest surface environments (Marvin et al., 2026). Further, this approach is now automated using SandAI-Z (Hasson et al., 2026).</p>
+  </div>
 
-    </main>
+  <div class="theme-block">
+    <h3 class="theme-title">Other Research Avenues</h3>
+    <p class="theme-text">In addition to my main research avenues, I am also interested in understanding the deposits of unvegetated meandering rivers (Hasson et al., 2023), coastal foredunes (Hilgendorf et al., 2024), glacial outburst floods (Blaske et al., in review; in prep), and the record of Earth's earliest dune systems (Colicci et al., in prep).</p>
+  </div>
 
-    <!-- RIGHT: Profile sidebar -->
-    <aside class="home-sidebar">
-      <div class="profile-card">
-
-        <!-- Profile photo -->
-        <div class="profile-photo-wrap">
-          <!-- PLACEHOLDER: Replace src with your actual photo path, e.g. assets/images/headshot.jpg -->
-          <!-- <img src="assets/images/YOUR_PHOTO.jpg" alt="M. Colin Marvin"> -->
-          <p class="profile-photo-placeholder">[Photo placeholder<br>add your image path]</p>
-        </div>
-
-        <p class="profile-name">M. Colin Marvin</p>
-        <p class="profile-title">Postdoctoral Research Associate<br>Brown University</p>
-
-        <hr class="profile-divider">
-
-        <!-- Contact & links -->
-        <ul class="profile-links">
-
-          <li>
-            <a href="mailto:m_colin_marvin@brown.edu">
-              <span class="link-icon">✉</span>
-              m_colin_marvin@brown.edu
-            </a>
-          </li>
-
-          <li>
-            <!-- PLACEHOLDER: Replace # with path to your CV PDF, e.g. assets/docs/CV_Marvin.pdf -->
-            <a href="#" target="_blank" rel="noopener">
-              <span class="link-icon">📄</span>
-              Curriculum Vitae
-            </a>
-          </li>
-
-          <li>
-            <!-- PLACEHOLDER: Replace # with your Google Scholar profile URL -->
-            <a href="#" target="_blank" rel="noopener">
-              <span class="link-icon">🎓</span>
-              Google Scholar
-            </a>
-          </li>
-
-          <li>
-            <!-- PLACEHOLDER: Replace # with your ORCID URL, e.g. https://orcid.org/0000-0000-0000-0000 -->
-            <a href="#" target="_blank" rel="noopener">
-              <span class="link-icon">🆔</span>
-              ORCID
-            </a>
-          </li>
-
-          <li>
-            <!-- PLACEHOLDER: Replace # with the SAMLAB / geomorph@Brown lab website URL -->
-            <a href="#" target="_blank" rel="noopener">
-              <span class="link-icon">🔬</span>
-              Lab Website
-            </a>
-          </li>
-
-          <li>
-            <!-- PLACEHOLDER: Replace # with your GitHub profile URL -->
-            <a href="#" target="_blank" rel="noopener">
-              <span class="link-icon">💻</span>
-              GitHub
-            </a>
-          </li>
-
-        </ul>
-      </div>
-    </aside>
-
-  </div><!-- /.home-grid -->
 </div><!-- /.page-wrapper -->
 
 <footer>
@@ -163,13 +93,6 @@
     <a href="mailto:m_colin_marvin@brown.edu">m_colin_marvin@brown.edu</a>
   </p>
 </footer>
-
-<script>
-  // Mark the current page's nav link as active
-  document.querySelectorAll('.nav-links a').forEach(a => {
-    a.classList.toggle('active', a.getAttribute('href') === location.pathname.split('/').pop() || (a.getAttribute('href') === 'index.html' && location.pathname.endsWith('/')));
-  });
-</script>
 
 </body>
 </html>

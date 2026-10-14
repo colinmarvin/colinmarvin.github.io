@@ -1,4 +1,3 @@
-[README.md](https://github.com/user-attachments/files/33400189/README.md)
 # M. Colin Marvin — Academic Website
 
 ## File structure
