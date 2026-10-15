@@ -1,21 +1,23 @@
 /* =====================================================
    M. Colin Marvin — Academic Website
-   style.css  (v2)
+   style.css  (v3)
    ===================================================== */
 
 /* ── CSS Variables ─────────────────────────────────── */
 :root {
-  --navy:       #1d3557;
-  --blue:       #457b9d;
-  --light-blue: #a8dadc;
-  --cream:      #f8f6f1;
+  --nav-bg:     #466362;
+  --nav-text:   #dfdfdf;
+  --heading:    #2a0c4e;
+  --accent:     #466362;
+  --item-bg:    #dfdfdf;
   --white:      #ffffff;
   --text:       #222222;
   --text-mid:   #444444;
   --text-light: #666666;
-  --border:     #ddd8cf;
-  --shadow:     rgba(29, 53, 87, 0.10);
+  --border:     #ccc;
+  --shadow:     rgba(42, 12, 78, 0.08);
   --max-width:  960px;
+  --font:       'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 /* ── Reset & Base ──────────────────────────────────── */
@@ -23,28 +25,28 @@
 html { scroll-behavior: smooth; }
 
 body {
-  font-family: Georgia, 'Times New Roman', serif;
+  font-family: var(--font);
   font-size: 16px;
   line-height: 1.75;
   color: var(--text);
   background: var(--white);
 }
 
-a { color: var(--blue); text-decoration: none; }
-a:hover { color: var(--navy); text-decoration: underline; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { color: var(--heading); text-decoration: underline; }
 img { max-width: 100%; display: block; }
 p { margin-bottom: 1em; }
 p:last-child { margin-bottom: 0; }
 
 h1, h2, h3, h4 {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
-  color: var(--navy);
+  font-family: var(--font);
+  color: var(--heading);
   line-height: 1.3;
 }
 
 /* ── Navigation ────────────────────────────────────── */
 nav {
-  background: var(--navy);
+  background: var(--nav-bg);
   position: sticky;
   top: 0;
   z-index: 100;
@@ -61,10 +63,10 @@ nav {
 }
 
 .nav-name {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+  font-family: var(--font);
   font-size: 0.9rem;
   font-weight: 600;
-  color: var(--light-blue);
+  color: var(--nav-text);
   letter-spacing: 0.04em;
   padding: 1rem 0;
   white-space: nowrap;
@@ -80,8 +82,8 @@ nav {
 .nav-links a {
   display: block;
   padding: 1rem 0.9rem;
-  color: #ccd6e0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+  color: var(--nav-text);
+  font-family: var(--font);
   font-size: 0.85rem;
   font-weight: 500;
   letter-spacing: 0.02em;
@@ -93,7 +95,7 @@ nav {
 .nav-links a:hover,
 .nav-links a.active {
   color: var(--white);
-  border-bottom-color: var(--light-blue);
+  border-bottom-color: var(--white);
 }
 
 /* ── Page wrapper ──────────────────────────────────── */
@@ -137,20 +139,20 @@ nav {
 .profile-name-large {
   font-size: 2.1rem;
   font-weight: 700;
-  color: var(--navy);
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+  color: var(--heading);
+  font-family: var(--font);
   line-height: 1.15;
 }
 
 .profile-position {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+  font-family: var(--font);
   font-size: 0.9rem;
   color: var(--text-light);
   margin-top: 0.1rem;
 }
 
 .profile-email {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+  font-family: var(--font);
   font-size: 0.88rem;
   margin-top: 0.15rem;
 }
@@ -187,11 +189,11 @@ nav {
 
 /* CV text pill */
 .social-cv {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+  font-family: var(--font);
   font-size: 0.75rem;
   font-weight: 700;
-  color: var(--navy);
-  border: 1.5px solid var(--navy);
+  color: var(--heading);
+  border: 1.5px solid var(--heading);
   border-radius: 4px;
   padding: 0.22rem 0.6rem;
   letter-spacing: 0.04em;
@@ -199,7 +201,7 @@ nav {
 }
 
 .social-links a:hover .social-cv {
-  background: var(--navy);
+  background: var(--heading);
   color: var(--white);
   opacity: 1;
 }
@@ -210,9 +212,10 @@ nav {
   line-height: 1.8;
   color: var(--text-mid);
   margin-bottom: 2.25rem;
+  text-align: justify;
 }
 
-/* Research theme blocks (no section header) */
+/* Research theme blocks */
 .theme-block {
   margin-bottom: 2rem;
   padding-bottom: 2rem;
@@ -228,8 +231,8 @@ nav {
 .theme-title {
   font-size: 1rem;
   font-weight: 700;
-  color: var(--navy);
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+  color: var(--heading);
+  font-family: var(--font);
   margin-bottom: 0.5rem;
 }
 
@@ -237,7 +240,26 @@ nav {
   font-size: 0.95rem;
   color: var(--text-mid);
   line-height: 1.78;
-  margin: 0;
+  margin: 0 0 0.9rem 0;
+  text-align: justify;
+}
+
+.theme-img {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 4px;
+  display: block;
+  margin-top: 0.5rem;
+}
+
+.theme-credit {
+  font-size: 0.72rem;
+  color: var(--text-light);
+  font-style: italic;
+  text-align: right;
+  margin-top: 0.3rem;
+  margin-bottom: 0;
 }
 
 /* ══════════════════════════════════════════════════════
@@ -247,10 +269,10 @@ nav {
 .pub-section-title {
   font-size: 1.2rem;
   font-weight: 700;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
-  color: var(--navy);
+  font-family: var(--font);
+  color: var(--heading);
   padding-bottom: 0.5rem;
-  border-bottom: 2px solid var(--blue);
+  border-bottom: 2px solid var(--accent);
   margin-bottom: 1.5rem;
 }
 
@@ -268,18 +290,18 @@ nav {
   align-items: flex-start;
   padding: 0.9rem 1rem;
   border-radius: 4px;
-  background: var(--cream);
-  border-left: 3px solid var(--light-blue);
+  background: var(--item-bg);
+  border-left: 3px solid var(--accent);
   transition: border-color 0.18s;
 }
 
-.pub-item:hover { border-left-color: var(--blue); }
+.pub-item:hover { border-left-color: var(--heading); }
 
 .pub-num {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+  font-family: var(--font);
   font-size: 0.8rem;
   font-weight: 700;
-  color: var(--blue);
+  color: var(--accent);
   white-space: nowrap;
   padding-top: 0.1rem;
   min-width: 2.1rem;
@@ -295,9 +317,9 @@ nav {
 .pub-text .pub-author-me { font-weight: 700; color: var(--text); }
 .pub-text .pub-journal { font-style: italic; }
 .pub-text a {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
-  font-size: 0.78rem;
-  color: var(--blue);
+  font-family: var(--font);
+  font-size: 0.88rem;
+  color: var(--accent);
 }
 
 /* ══════════════════════════════════════════════════════
@@ -344,7 +366,7 @@ nav {
 .field-img-placeholder {
   font-size: 0.7rem;
   color: #888;
-  font-family: sans-serif;
+  font-family: var(--font);
   text-align: center;
   line-height: 1.5;
 }
@@ -354,10 +376,10 @@ nav {
 }
 
 .field-card-title {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+  font-family: var(--font);
   font-size: 0.95rem;
   font-weight: 700;
-  color: var(--navy);
+  color: var(--heading);
   margin-bottom: 0.3rem;
 }
 
@@ -383,16 +405,16 @@ nav {
   display: flex;
   gap: 1rem;
   padding: 0.9rem 1.1rem;
-  background: var(--cream);
-  border-left: 3px solid var(--light-blue);
+  background: var(--item-bg);
+  border-left: 3px solid var(--accent);
   border-radius: 0 4px 4px 0;
 }
 
 .media-year {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+  font-family: var(--font);
   font-size: 0.8rem;
   font-weight: 700;
-  color: var(--blue);
+  color: var(--accent);
   white-space: nowrap;
   min-width: 2.4rem;
   padding-top: 0.1rem;
@@ -404,6 +426,8 @@ nav {
   color: var(--text-mid);
   margin: 0;
 }
+
+.media-text a { color: var(--accent); }
 
 /* ══════════════════════════════════════════════════════
    SHARED — page header, footer
@@ -418,21 +442,21 @@ nav {
 .page-title {
   font-size: 1.7rem;
   font-weight: 700;
-  color: var(--navy);
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+  color: var(--heading);
+  font-family: var(--font);
 }
 
 footer {
-  background: var(--cream);
+  background: #f4f4f4;
   border-top: 1px solid var(--border);
   text-align: center;
   padding: 1.5rem;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+  font-family: var(--font);
   font-size: 0.78rem;
   color: var(--text-light);
 }
 
-footer a { color: var(--blue); }
+footer a { color: var(--accent); }
 
 /* ══════════════════════════════════════════════════════
    RESPONSIVE
