@@ -257,6 +257,28 @@ nav {
   margin-top: 0.5rem;
 }
 
+.theme-relevant {
+  font-size: 18px;
+  color: var(--text);
+  margin-top: 0.6rem;
+  margin-bottom: 0;
+}
+
+.theme-relevant strong {
+  color: var(--heading);
+  font-weight: 700;
+}
+
+.theme-relevant a {
+  color: var(--text);
+  font-size: 18px;
+  text-decoration: underline;
+}
+
+.theme-relevant a:hover {
+  color: var(--heading);
+}
+
 .theme-credit {
   font-size: 11px;
   font-style: normal;
