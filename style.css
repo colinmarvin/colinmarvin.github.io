@@ -229,7 +229,7 @@ nav {
 }
 
 .theme-title {
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-weight: 700;
   color: var(--heading);
   font-family: var(--font);
@@ -256,10 +256,15 @@ nav {
 .theme-credit {
   font-size: 0.72rem;
   color: var(--text-light);
-  font-style: italic;
   text-align: right;
   margin-top: 0.3rem;
   margin-bottom: 0;
+}
+
+.theme-img--natural {
+  max-height: none;
+  object-fit: unset;
+  height: auto;
 }
 
 /* ══════════════════════════════════════════════════════
