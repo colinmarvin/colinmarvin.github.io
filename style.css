@@ -185,8 +185,8 @@ nav {
 
 /* Logo image icons */
 .social-logo {
-  width: 45px;
-  height: 45px;
+  width: 36px;
+  height: 36px;
   object-fit: contain;
   border-radius: 5px;
 }
@@ -194,12 +194,12 @@ nav {
 /* CV text pill */
 .social-cv {
   font-family: var(--font);
-  font-size: 1.125rem;
+  font-size: 0.9rem;
   font-weight: 700;
   color: var(--heading);
-  border: 2px solid var(--heading);
+  border: 1.5px solid var(--heading);
   border-radius: 4px;
-  padding: 0.33rem 0.9rem;
+  padding: 0.26rem 0.72rem;
   letter-spacing: 0.04em;
   transition: background 0.18s, color 0.18s;
 }
